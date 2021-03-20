@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node --build-arg NAME=${FAVORITE_FOOD}.
+  - docker build -t simple-node --build-arg NAME=${FAVORITE_FOOD} .
   - docker tag simple-node jimmypan/simple-node:latest
 
 # Formatting the Docker username and password as below to programmatically log in without having the password exposed in logs.
